@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { CtaBand, SectionIntro } from "@/components/page-shell";
-import { SiteHeader } from "@/components/site-header";
 import { serviceAreas, workPrinciples } from "@/lib/site";
 
 const projectFits = [
@@ -41,7 +40,7 @@ const workSituations = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-stone-100 text-stone-950">
-      <section className="relative min-h-screen overflow-hidden bg-stone-950 text-white">
+      <section className="relative min-h-[calc(100svh-89px)] overflow-hidden bg-stone-950 text-white">
         <video
           className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
           src="/assets/engineering-vid1.mp4"
@@ -55,9 +54,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-stone-950 via-stone-950/82 to-stone-950/30" />
         <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/20" />
 
-        <SiteHeader />
-
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-73px)] max-w-7xl items-center px-6 py-16 sm:px-8 sm:py-20 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100svh-89px)] max-w-7xl items-center px-6 py-16 sm:px-8 sm:py-20 lg:px-10">
           <div className="max-w-4xl">
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">
               Mechanical. Electrical. Civil.

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { SiteHeader } from "@/components/site-header";
 
 export function PageHero({
   eyebrow,
@@ -13,7 +12,7 @@ export function PageHero({
   videoSrc?: string;
 }) {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-stone-950 text-white">
+    <section className="relative min-h-[calc(100svh-89px)] overflow-hidden bg-stone-950 text-white">
       {videoSrc ? (
         <>
           <video
@@ -30,8 +29,7 @@ export function PageHero({
           <div className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/20" />
         </>
       ) : null}
-      <SiteHeader />
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-73px)] max-w-7xl items-center px-6 py-16 sm:px-8 sm:py-20 lg:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-89px)] max-w-7xl items-center px-6 py-16 sm:px-8 sm:py-20 lg:px-10">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
             {eyebrow}

@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import ramotilaLogo from "@/app/assets/ramotila-construction-logo.png";
 import {
   addressLines,
   navItems,
@@ -14,8 +16,18 @@ export function SiteFooter() {
     <footer className="bg-stone-950 px-6 py-12 text-white sm:px-8 lg:px-10">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
         <div>
-          <Link href="/" className="text-xl font-semibold tracking-normal">
-            Ramotila Construction
+          <Link
+            href="/"
+            className="inline-flex items-center"
+            aria-label="Ramotila Construction home"
+          >
+            <Image
+              src={ramotilaLogo}
+              alt="Ramotila Construction"
+              className="h-20 w-auto"
+              sizes="160px"
+              placeholder="blur"
+            />
           </Link>
           <p className="mt-5 max-w-sm leading-7 text-stone-300">
             Mechanical, electrical, and civil engineering services delivered

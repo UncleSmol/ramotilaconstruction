@@ -1,8 +1,22 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
+import ramotilaLogo from "@/app/assets/ramotila-construction-logo.png";
 import { navItems } from "@/lib/site";
 
 export function SiteHeader({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const isDark = variant === "dark";
+  const pathname = usePathname();
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    if (mobileMenuRef.current) {
+      mobileMenuRef.current.open = false;
+    }
+  }, [pathname]);
 
   const linkClassName = `transition ${
     isDark ? "hover:text-amber-300" : "hover:text-amber-700"
@@ -19,16 +33,19 @@ export function SiteHeader({ variant = "dark" }: { variant?: "dark" | "light" })
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
         <Link
           href="/"
-          className="inline-flex items-baseline text-lg font-semibold tracking-normal"
+          className="inline-flex items-center"
           aria-label="Ramotila Construction home"
         >
-          <span className="text-amber-400">Ramotila</span>
-          <span className={isDark ? "text-white" : "text-stone-950"}>
-            &nbsp;Construction
-          </span>
+          <Image
+            src={ramotilaLogo}
+            alt="Ramotila Construction"
+            className="h-12 w-auto"
+            sizes="96px"
+            placeholder="blur"
+          />
         </Link>
 
-        <details className="group relative z-50 xl:hidden">
+        <details ref={mobileMenuRef} className="group relative z-50 xl:hidden">
           <summary
             aria-label="Toggle navigation menu"
             className={`flex h-12 w-12 touch-manipulation cursor-pointer list-none items-center justify-center border transition [&::-webkit-details-marker]:hidden ${

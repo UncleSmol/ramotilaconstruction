@@ -33,3 +33,48 @@ body::-webkit-scrollbar {
 * {
   box-sizing: border-box;
 }
+
+@layer components {
+  .perspective-card {
+    position: relative;
+    transform: perspective(900px) rotateX(1.5deg) rotateY(-2deg)
+      translateZ(0);
+    transform-style: preserve-3d;
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease,
+      border-color 220ms ease;
+    box-shadow:
+      0 18px 36px rgb(28 25 23 / 0.12),
+      10px 14px 0 rgb(245 158 11 / 0.16);
+  }
+
+  .perspective-card::after {
+    content: "";
+    position: absolute;
+    inset: 10px -10px -10px 10px;
+    z-index: -1;
+    border: 1px solid rgb(245 158 11 / 0.28);
+    background: rgb(28 25 23 / 0.06);
+    transform: translateZ(-28px);
+  }
+
+  .perspective-card:hover {
+    transform: perspective(900px) rotateX(0deg) rotateY(0deg)
+      translateY(-6px) translateZ(18px);
+    box-shadow:
+      0 28px 52px rgb(28 25 23 / 0.18),
+      14px 18px 0 rgb(245 158 11 / 0.2);
+  }
+
+  .perspective-card-dark {
+    box-shadow:
+      0 22px 42px rgb(0 0 0 / 0.28),
+      10px 14px 0 rgb(245 158 11 / 0.18);
+  }
+
+  .perspective-card-dark::after {
+    border-color: rgb(245 158 11 / 0.32);
+    background: rgb(255 255 255 / 0.08);
+  }
+}
