@@ -49,18 +49,40 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <SectionIntro
-            eyebrow="Project Stages"
-            title="Ramotila can fit into different points of the construction programme."
-            description="Some clients need help before work starts. Others need trade support during active delivery, or construction assistance that prepares the next stage."
-          />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://pixabay.com/images/download/anncapictures-planning-3536758_1920.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                Project Stages
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
+                Ramotila can fit into different points of the construction
+                programme.
+              </h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-stone-200">
+              Some clients need help before work starts. Others need trade
+              support during active delivery, or construction assistance that
+              prepares the next stage.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-14">
             {projectStages.map(([title, text]) => (
-              <article key={title} className="border border-stone-200 bg-stone-100 p-7">
+              <article
+                key={title}
+                className="perspective-card perspective-card-dark border border-white/14 bg-stone-950/82 p-7 text-white backdrop-blur-sm"
+              >
                 <h2 className="text-2xl font-semibold">{title}</h2>
-                <p className="mt-4 leading-7 text-stone-700">{text}</p>
+                <p className="mt-4 leading-7 text-stone-200">{text}</p>
               </article>
             ))}
           </div>

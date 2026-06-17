@@ -50,16 +50,24 @@ export default function ElectricalEngineeringPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://pixabay.com/images/download/stevepb-diy-981404_1920.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               Electrical Readiness
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
               Reliable electrical work is planned before cables are pulled.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-stone-700">
+            <p className="mt-6 text-lg leading-8 text-stone-200">
               Ramotila looks at installation conditions, routing, protection,
               access, and the other construction work that can affect electrical
               delivery.
@@ -67,7 +75,7 @@ export default function ElectricalEngineeringPage() {
           </div>
           <div className="grid gap-3">
             {readinessChecks.map((check) => (
-              <p key={check} className="border-l-4 border-amber-500 bg-stone-100 p-5 font-medium leading-7">
+              <p key={check} className="border-l-4 border-amber-400 bg-stone-950/82 p-5 font-medium leading-7 text-stone-100 backdrop-blur-sm">
                 {check}
               </p>
             ))}

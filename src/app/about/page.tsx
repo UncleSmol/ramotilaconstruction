@@ -90,18 +90,40 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-stone-100 px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <SectionIntro
-            eyebrow="What Shapes The Work"
-            title="The work is measured by how well it performs after the team leaves."
-            description="Ramotila's role is to help clients move from a requirement to a completed scope without losing control of the practical details that affect cost, timing, and quality."
-          />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://pixabay.com/images/download/webandi-skyscraper-4327213_1920.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                What Shapes The Work
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
+                The work is measured by how well it performs after the team
+                leaves.
+              </h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-stone-200">
+              Ramotila&apos;s role is to help clients move from a requirement to
+              a completed scope without losing control of the practical details
+              that affect cost, timing, and quality.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-14">
             {foundations.map((item) => (
-              <article key={item.title} className="border border-stone-200 bg-white p-7 shadow-sm">
+              <article
+                key={item.title}
+                className="perspective-card perspective-card-dark border border-white/14 bg-stone-950/82 p-7 text-white backdrop-blur-sm"
+              >
                 <h3 className="text-2xl font-semibold tracking-normal">{item.title}</h3>
-                <p className="mt-4 leading-7 text-stone-700">{item.text}</p>
+                <p className="mt-4 leading-7 text-stone-200">{item.text}</p>
               </article>
             ))}
           </div>
@@ -118,9 +140,12 @@ export default function AboutPage() {
               Ramotila can support a scope from early review through handover.
             </h2>
           </div>
-          <div className="mt-12 grid gap-4 lg:grid-cols-4">
+          <div className="mt-12 grid gap-12 lg:grid-cols-4 lg:gap-14">
             {projectLifecycle.map(([title, text], index) => (
-              <article key={title} className="border border-white/12 bg-white/8 p-6">
+              <article
+                key={title}
+                className="perspective-card perspective-card-dark border border-white/12 bg-white/8 p-6"
+              >
                 <p className="text-sm font-semibold text-amber-300">
                   {String(index + 1).padStart(2, "0")}
                 </p>

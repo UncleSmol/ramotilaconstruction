@@ -101,30 +101,48 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-stone-100 px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <SectionIntro
-            eyebrow="What Ramotila Does"
-            title="Construction support across connected engineering scopes."
-            description="Most construction problems do not sit inside one neat box. Ramotila's work covers the trade areas that often overlap on real projects, helping teams move from site preparation through installation and handover."
-          />
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage: "url('/assets/what-ramotila-does-bg.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/76 to-stone-950/46" />
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                What Ramotila Does
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
+                Construction support across connected engineering scopes.
+              </h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-stone-200">
+              Most construction problems do not sit inside one neat box.
+              Ramotila&apos;s work covers the trade areas that often overlap on
+              real projects, helping teams move from site preparation through
+              installation and handover.
+            </p>
+          </div>
 
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          <div className="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-14">
             {serviceAreas.map((service, index) => (
               <article
                 key={service.title}
-                className="border border-stone-200 bg-white p-7 shadow-sm"
+                className="perspective-card perspective-card-dark border border-white/14 bg-stone-950/82 p-7 text-white backdrop-blur-sm"
               >
-                <span className="text-sm font-semibold text-amber-700">
+                <span className="text-sm font-semibold text-amber-300">
                   0{index + 1}
                 </span>
                 <h3 className="mt-5 text-2xl font-semibold tracking-normal">
                   {service.title}
                 </h3>
-                <p className="mt-4 leading-7 text-stone-700">{service.intro}</p>
+                <p className="mt-4 leading-7 text-stone-200">{service.intro}</p>
                 <Link
                   href={service.href}
-                  className="mt-7 inline-flex text-sm font-semibold text-amber-800 transition hover:text-stone-950"
+                  className="mt-7 inline-flex text-sm font-semibold text-amber-300 transition hover:text-white"
                 >
                   Learn more
                 </Link>
@@ -198,9 +216,12 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-12 grid gap-4 lg:grid-cols-4">
+          <div className="mt-12 grid gap-12 lg:grid-cols-4 lg:gap-14">
             {deliverySteps.map(([number, title, text]) => (
-              <article key={title} className="border border-white/12 bg-white/8 p-6">
+              <article
+                key={title}
+                className="perspective-card perspective-card-dark border border-white/12 bg-white/8 p-6"
+              >
                 <p className="text-sm font-semibold text-amber-300">{number}</p>
                 <h3 className="mt-5 text-xl font-semibold">{title}</h3>
                 <p className="mt-4 leading-7 text-stone-300">{text}</p>

@@ -53,18 +53,39 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <SectionIntro
-            eyebrow="Choosing The Right Support"
-            title="The best service route depends on what is blocking progress."
-            description="Some projects need one focused trade. Others need a team that can understand the connection between ground conditions, installation access, electrical readiness, and mechanical requirements."
-          />
-          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://cdn.pixabay.com/photo/2021/02/09/20/45/architecture-5999913_960_720.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/76" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/70 to-stone-950/42" />
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                Choosing The Right Support
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
+                The best service route depends on what is blocking progress.
+              </h2>
+            </div>
+            <p className="max-w-3xl text-lg leading-8 text-stone-200">
+              Some projects need one focused trade. Others need a team that can
+              understand the connection between ground conditions, installation
+              access, electrical readiness, and mechanical requirements.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:gap-10">
             {decisionPoints.map(([title, text]) => (
-              <article key={title} className="border border-stone-200 bg-stone-100 p-7">
+              <article
+                key={title}
+                className="border border-white/14 bg-stone-950/82 p-7 text-white shadow-2xl backdrop-blur-sm transition hover:-translate-y-2 hover:border-amber-300/70"
+              >
                 <h2 className="text-2xl font-semibold">{title}</h2>
-                <p className="mt-4 leading-7 text-stone-700">{text}</p>
+                <p className="mt-4 leading-7 text-stone-200">{text}</p>
               </article>
             ))}
           </div>

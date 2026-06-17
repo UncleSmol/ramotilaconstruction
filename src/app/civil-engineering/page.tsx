@@ -50,23 +50,31 @@ export default function CivilEngineeringPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://pixabay.com/images/download/pewasser-truck-3308261_1920.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               Civil Readiness
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
               Civil work sets the conditions for everything that follows.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-stone-700">
+            <p className="mt-6 text-lg leading-8 text-stone-200">
               Ramotila supports civil scopes that prepare, protect, level, drain,
               support, or structure a work area so the project can move forward.
             </p>
           </div>
           <div className="grid gap-3">
             {deliveryConcerns.map((concern) => (
-              <p key={concern} className="border-l-4 border-amber-500 bg-stone-100 p-5 font-medium leading-7">
+              <p key={concern} className="border-l-4 border-amber-400 bg-stone-950/82 p-5 font-medium leading-7 text-stone-100 backdrop-blur-sm">
                 {concern}
               </p>
             ))}

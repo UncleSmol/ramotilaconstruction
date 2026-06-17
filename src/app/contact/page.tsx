@@ -1,5 +1,5 @@
 import { CtaBand, PageHero } from "@/components/page-shell";
-import { addressLines, officeMapEmbedUrl, officeMapUrl, serviceAreas } from "@/lib/site";
+import { officeMapEmbedUrl, officeMapUrl, serviceAreas } from "@/lib/site";
 
 const enquiryChecklist = [
   "Which service area is involved: mechanical, electrical, civil, or a combination.",
@@ -30,14 +30,6 @@ export default function ContactPage() {
       <section className="px-6 py-20 sm:px-8 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="grid gap-5">
-            <address className="border-l-4 border-amber-500 bg-white p-8 text-2xl font-semibold not-italic leading-10 shadow-sm">
-              {addressLines.map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </address>
             <div className="overflow-hidden border border-stone-200 bg-white shadow-sm">
               <iframe
                 title="Ramotila Construction office map"
@@ -73,16 +65,24 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <section className="bg-white px-6 py-20 sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://pixabay.com/images/download/mih83-feedback-1213042_1920.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               What To Include
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-normal sm:text-4xl lg:text-5xl">
               A clear enquiry helps the team understand the work faster.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-stone-700">
+            <p className="mt-6 text-lg leading-8 text-stone-200">
               You do not need a perfect brief before making contact. A few
               practical details are enough to start the conversation and decide
               what should happen next.
@@ -90,7 +90,7 @@ export default function ContactPage() {
           </div>
           <div className="grid gap-3">
             {enquiryChecklist.map((item) => (
-              <p key={item} className="border-l-4 border-amber-500 bg-stone-100 p-5 font-medium leading-7">
+              <p key={item} className="border-l-4 border-amber-400 bg-stone-950/82 p-5 font-medium leading-7 text-stone-100 backdrop-blur-sm">
                 {item}
               </p>
             ))}

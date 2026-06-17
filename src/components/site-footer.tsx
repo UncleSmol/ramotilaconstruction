@@ -4,7 +4,6 @@ import ramotilaLogo from "@/app/assets/ramotila-construction-logo.png";
 import {
   addressLines,
   navItems,
-  officeMapEmbedUrl,
   officeMapUrl,
   serviceAreas,
 } from "@/lib/site";
@@ -74,15 +73,6 @@ export function SiteFooter() {
               </span>
             ))}
           </address>
-          <div className="mt-5 overflow-hidden border border-white/10">
-            <iframe
-              title="Ramotila Construction office map"
-              src={officeMapEmbedUrl}
-              className="h-40 w-full"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
           <a
             href={officeMapUrl}
             target="_blank"
