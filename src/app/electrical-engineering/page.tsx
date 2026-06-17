@@ -54,11 +54,11 @@ export default function ElectricalEngineeringPage() {
         className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
         style={{
           backgroundImage:
-            "url('https://pixabay.com/images/download/stevepb-diy-981404_1920.jpg')",
+            "url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       >
         <div className="absolute inset-0 bg-stone-950/78" />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="absolute inset-0 bg-linear-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">

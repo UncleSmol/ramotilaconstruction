@@ -205,8 +205,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-stone-950 px-6 py-20 text-white sm:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section
+        className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
+        style={{
+          backgroundImage:
+            "url('https://i.pinimg.com/736x/e8/c6/7e/e8c67ea164addc85a9a7aa6318336d28.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-stone-950/78" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/72 to-stone-950/42" />
+        <div className="relative z-10 mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
               From Enquiry To Handover

@@ -54,7 +54,7 @@ export default function MechanicalEngineeringPage() {
         className="relative overflow-hidden bg-stone-950 bg-cover bg-center bg-fixed px-6 py-24 text-white sm:px-8 lg:px-10"
         style={{
           backgroundImage:
-            "url('https://pixabay.com/images/download/chrisreadingfoto-spanner-3013135_1920.jpg')",
+            "url('https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       >
         <div className="absolute inset-0 bg-stone-950/78" />
